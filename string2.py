@@ -1,5 +1,9 @@
 #!/usr/bin/python -tt
 
+#Verbing Function
+#Given a string, if its length is at least 3, 
+#add 'ing' at its end.
+#If the string already ends in 'ing', add 'ly' at the end
 def verbing(s):
   if (len(s) >= 3 and s[-3:] != 'ing'):
 	return s + 'ing'
@@ -8,6 +12,10 @@ def verbing(s):
   else:
   	return s
 
+#Not Bad Function
+#Given a string, find the 1st occurance of substring 'not' and 'bad'.
+#if 'bad' follows 'not', replace the whole 'not' ... 'bad' substring with 'good'
+#Ex: 'This dinner is not that bad' results in: 'This dinner is good'
 def not_bad(s):
   n = s.find('not')
   b = s.find('bad')
@@ -17,6 +25,12 @@ def not_bad(s):
 
   return s
 
+#Front Back Function
+#Divide a string into 2 halves.
+#If the string length is even, both halves are of the same length.
+#If the string length is odd, the first half will contain the extra character.
+#Ex: 'abcde' the front half is 'abc' and back half is 'de'.
+#Given 2 strings a and b, return a string of the form: a_front + b_front + a_back + b_back
 def front_back(a,b):
   len_a = len(a)
   aHalf = len_a / 2
@@ -35,6 +49,7 @@ def front_back(a,b):
 
   return a_front + b_front + a_back + b_back
 
+#Simple Provided Test function used in the main() to print what each function returns vs. what it is supposed to return
 def test(got,expected):
   if (got == expected):
 	prefix = 'OK'
